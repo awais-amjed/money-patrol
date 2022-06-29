@@ -1,0 +1,62 @@
+class CategoriesController < ApplicationController
+  load_and_authorize_resource
+
+  before_action :set_user
+  before_action :set_category, only: %i[ show destroy ]
+
+  # GET /categories or /categories.json
+  def index
+    @categories = @user.categories
+  end
+
+  # GET /categories/1 or /categories/1.json
+  def show
+  end
+
+  # GET /categories/new
+  def new
+    @category = Category.new
+  end
+
+  # POST /categories or /categories.json
+  def create
+    @category = Category.new(category_params)
+    @category.author = @user
+
+    respond_to do |format|
+      if @category.save
+        format.html { redirect_to category_url(@category), notice: "Category was successfully created." }
+        format.json { render :show, status: :created, location: @category }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @category.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /categories/1 or /categories/1.json
+  def destroy
+    @category.destroy
+
+    respond_to do |format|
+      format.html { redirect_to categories_url, notice: "Category was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_category
+    @category = Category.find(params[:id])
+  end
+
+  def set_user
+    @user = current_user
+  end
+
+  # Only allow a list of trusted parameters through.
+  def category_params
+    params.require(:category).permit(:name, :icon)
+  end
+end
