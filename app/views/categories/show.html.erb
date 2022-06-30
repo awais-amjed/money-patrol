@@ -6,7 +6,7 @@
         <img src="<%= @category.icon %>" alt="Category icon">
         <div class="category-text-container">
           <h2><%= @category.name %></h2>
-          <p>Total amount spent: $<%= @category.expenses.sum(:amount) %></p>
+          <p>Total amount spent: <strong>$<%= @category.expenses.sum(:amount) %></strong></p>
         </div>
         <%= button_to 'Delete this Category', @category, method: :delete, class: 'btn btn-warning' %>
       </div>
