@@ -1,6 +1,6 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap');
 
 $primary-color: #3778c2;
 $secondary-color: #5fb523;
@@ -253,4 +253,28 @@ form {
 
 .links a {
   margin-bottom: 10px;
+}
+
+#splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 30px 0;
+
+  h1 {
+    margin: auto;
+    font-size: 3rem;
+    font-family: 'Satisfy', cursive;
+  }
+
+  form {
+    margin: 10px;
+  }
+
+  button {
+    height: 60px;
+    width: 350px;
+  }
 }
