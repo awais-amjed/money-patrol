@@ -1,5 +1,5 @@
 <div id="new-category-page">
-  <%= render 'layouts/header', title: 'New Category' %>
+  <%= render 'layouts/header', title: 'New Category', back_url: categories_path %>
   <div class="content">
     <%= render "form", category: @category %>
   </div>

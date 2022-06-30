@@ -1,7 +1,9 @@
 <header>
   <nav>
-    <%= link_to _back_url do %>
-      <i class="fa fa-arrow-left fa-2x"></i>
+    <% unless back_url.nil? %>
+      <%= link_to back_url do %>
+        <i class="fa fa-arrow-left fa-2x"></i>
+      <% end %>
     <% end %>
     <h1><%= title %></h1>
     <%= button_to destroy_user_session_path, method: :delete do %>
