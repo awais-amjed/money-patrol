@@ -6,7 +6,6 @@
         <%= render category %>
       <% end %>
     </div>
-
-    <%= link_to "New category", new_category_path %>
   </div>
+  <%= render 'layouts/footer', title: 'Add new Category', path: new_category_path %>
 </div>
