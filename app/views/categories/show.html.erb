@@ -1,9 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<div id="expenses-page">
+  <%= render 'layouts/header', title: 'Expenses' %>
+  <div class="content">
+    <div id="category-container">
+      <div class="category">
+        <img src="<%= @category.icon %>" alt="Category icon">
+        <div class="category-text-container">
+          <h2><%= @category.name %></h2>
+          <p>Total amount spent: $<%= @category.expenses.sum(:amount) %></p>
+        </div>
+        <%= button_to 'Delete this Category', @category, method: :delete, class: 'btn btn-warning' %>
+      </div>
+    </div>
 
-<%= render @category %>
-
-<div>
-  <%= link_to "Back to categories", categories_path %>
-
-  <%= button_to "Destroy this category", @category, method: :delete %>
+    <p id="list-of-expenses">List of Expenses</p>
+    <div id="expenses">
+      <% @expenses.each do |expense| %>
+        <%= render expense %>
+      <% end %>
+    </div>
+  </div>
+  <%= render 'layouts/footer', title: 'Add new Expense', path: new_category_expense_path(@category) %>
 </div>

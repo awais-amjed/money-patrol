@@ -15,6 +15,15 @@ $max-width: 700px;
   color: $text-color;
 }
 
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
 .btn-primary {
   background-color: $primary-color;
 }
@@ -81,28 +90,32 @@ header {
   #categories {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 
     .category {
       display: flex;
-      gap: 10px;
-      height: 100px;
+      gap: 15px;
+      height: 110px;
       padding: 8px;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.13);
+      border-radius: 5px;
 
       img {
-        width: 100px;
-        height: 84px;
+        width: 104px;
+        height: 94px;
         object-fit: cover;
+        border-radius: 5px;
       }
 
       .category-text-container {
+        margin: auto 0;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
         text-overflow: ellipsis;
+        height: 80px;
 
         .category-name {
           font-size: 1.1rem;
@@ -116,6 +129,7 @@ header {
       }
 
       .category-amount {
+        margin-top: 5px;
         font-weight: bold;
         flex-shrink: 0;
       }
@@ -143,5 +157,96 @@ form {
 
   input[type=submit] {
     margin-top: 30px;
+  }
+}
+
+#expenses-page {
+  #category-container {
+    .category {
+      display: flex;
+      gap: 20px;
+      height: 120px;
+      align-items: center;
+
+      img {
+        width: 135px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .category-text-container {
+        flex-grow: 1;
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .category-creation-time {
+          color: grey;
+          font-size: 0.8rem;
+        }
+      }
+
+      .btn-warning {
+        height: 100px;
+        width: 100px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  #list-of-expenses {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 40px 0 30px 5px;
+  }
+
+  #expenses {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .expense {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      height: 80px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.13);
+
+      .expense-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60px;
+
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        .expense-text-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+
+          .expense-amount {
+            font-size: 0.9rem;
+          }
+
+          .expense-date {
+            font-size: 0.8rem;
+            color: grey;
+          }
+        }
+      }
+
+      .btn-danger {
+        height: 50px;
+        width: 70px;
+      }
+    }
   }
 }

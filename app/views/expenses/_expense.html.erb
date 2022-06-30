@@ -1,2 +1,10 @@
-<div id="<%= dom_id expense %>">
+<div class="expense">
+  <div class="expense-container">
+    <h3><%= expense.name %></h3>
+    <div class="expense-text-container">
+      <p class="expense-amount">Amount Spent: $<%= expense.amount %></p>
+      <p class="expense-date"><%= expense.created_at.strftime('%d %B %Y') %></p>
+    </div>
+  </div>
+  <%= button_to 'Delete', category_expense_path(@category), class: 'btn btn-danger btn-sm', method: :delete %>
 </div>
