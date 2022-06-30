@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div id="categories-page">
+  <%= render 'layouts/header', title: 'Categories' %>
+  <div class="content">
+    <div id="categories">
+      <% @categories.each do |category| %>
+        <%= render category %>
+        <p>
+          <%= link_to "Show this category", category %>
+        </p>
+      <% end %>
+    </div>
 
-<h1>Categories</h1>
-
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
+    <%= link_to "New category", new_category_path %>
+  </div>
 </div>
-
-<%= link_to "New category", new_category_path %>
