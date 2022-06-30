@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { @user = User.new(name: 'Test User') }
+  subject { @user = User.new(name: 'Test User', email: 'a@b.c', password: '123123') }
 
   context 'After creating a new user object' do
     it 'should be valid' do

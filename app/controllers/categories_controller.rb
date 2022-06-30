@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   load_and_authorize_resource
 
   before_action :set_user
-  before_action :set_category, only: %i[ show destroy ]
+  before_action :set_category, only: %i[show destroy]
 
   # GET /categories or /categories.json
   def index
@@ -10,8 +10,7 @@ class CategoriesController < ApplicationController
   end
 
   # GET /categories/1 or /categories/1.json
-  def show
-  end
+  def show; end
 
   # GET /categories/new
   def new
@@ -25,7 +24,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to category_url(@category), notice: "Category was successfully created." }
+        format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +38,7 @@ class CategoriesController < ApplicationController
     @category.destroy
 
     respond_to do |format|
-      format.html { redirect_to categories_url, notice: "Category was successfully destroyed." }
+      format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

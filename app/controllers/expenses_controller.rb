@@ -1,7 +1,7 @@
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: %i[ destroy ]
+  before_action :set_expense, only: %i[destroy]
   before_action :set_category
-  before_action :set_user, only: %i[ new ]
+  before_action :set_user, only: %i[new]
 
   # GET /expenses/new
   def new
@@ -14,7 +14,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to category_url(@category), notice: "Expense was successfully created." }
+        format.html { redirect_to category_url(@category), notice: 'Expense was successfully created.' }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -28,7 +28,7 @@ class ExpensesController < ApplicationController
     @expense.destroy
 
     respond_to do |format|
-      format.html { redirect_to category_url(@category), notice: "Expense was successfully destroyed." }
+      format.html { redirect_to category_url(@category), notice: 'Expense was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

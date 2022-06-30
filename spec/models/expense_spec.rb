@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
   before do
-    @user = User.create!(name: 'Test User')
+    @user = User.create!(name: 'Test User', email: 'a@b.c', password: '123123')
     @category = Category.create!(author_id: @user.id, name: 'Test Category', icon: 'Test Icon')
   end
 

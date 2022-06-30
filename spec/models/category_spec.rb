@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  before { @user = User.create!(name: 'Test User') }
+  before { @user = User.create!(name: 'Test User', email: 'a@b.c', password: '123123') }
 
   subject { @category = Category.new(author: @user, name: 'Test Category', icon: 'Test Icon') }
 
