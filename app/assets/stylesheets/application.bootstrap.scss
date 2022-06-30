@@ -49,6 +49,17 @@ a {
   max-width: $max-width;
 }
 
+form {
+  margin: 50px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  input[type=submit] {
+    margin-top: 30px;
+  }
+}
+
 header {
   background-color: $primary-color;
   height: 80px;
@@ -83,6 +94,10 @@ header {
       background-color: transparent;
       border: none;
     }
+  }
+
+  form {
+    margin: 0;
   }
 }
 
@@ -147,16 +162,9 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: $secondary-color;
-}
 
-form {
-  margin: 50px 0 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  input[type=submit] {
-    margin-top: 30px;
+  form {
+    margin: 0;
   }
 }
 
