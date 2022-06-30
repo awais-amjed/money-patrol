@@ -14,9 +14,9 @@
   </head>
 
   <body>
-    <% flash.each do |type, msg| %>
-      <div class="alert">
-        <%= msg %>
+    <% flash.each do |key, value| %>
+      <div class="custom-flash alert alert-<%= flash_class(key) %> alert-dismissible fade show">
+        <%= value %>
       </div>
     <% end %>
 
