@@ -5,7 +5,7 @@
 $primary-color: #3778c2;
 $secondary-color: #5fb523;
 $text-color: #434b54;
-$max-width: 500px;
+$max-width: 700px;
 
 * {
   padding: 0;
@@ -36,7 +36,7 @@ a {
 
 .content {
   margin: 0 auto;
-  padding: 100px 5% 50px;
+  padding: 100px 5% 100px;
   max-width: $max-width;
 }
 
@@ -68,6 +68,11 @@ header {
       margin-top: 7px;
       color: white;
       font-size: 1.7rem;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
     }
   }
 }
