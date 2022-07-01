@@ -17,4 +17,3 @@ RSpec.describe 'Splash', type: :request do
     end
   end
 end
-

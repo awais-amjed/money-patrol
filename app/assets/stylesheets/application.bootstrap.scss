@@ -101,6 +101,22 @@ header {
   }
 }
 
+footer {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  inset: auto 0 0 0;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+
+  form {
+    margin: 0;
+  }
+}
+
 #categories-page {
   form {
     margin: 0;
@@ -153,22 +169,6 @@ header {
         flex-shrink: 0;
       }
     }
-  }
-}
-
-footer {
-  position: fixed;
-  width: 100%;
-  z-index: 9;
-  inset: auto 0 0 0;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $secondary-color;
-
-  form {
-    margin: 0;
   }
 }
 
