@@ -5,9 +5,9 @@
 > Divide your expenses into categories and keep a check on them.
 
 <p style="display: flex; align-items: center; gap: 10px">
-  <img src="images/app_screenshot_1.png" width="33%" />
-  <img src="images/app_screenshot_2.png" width="33%" />
-  <img src="images/app_screenshot_3.png" width="33%" />
+  <img src="images/app_screenshot_1.png" width="30%" />
+  <img src="images/app_screenshot_2.png" width="30%" />
+  <img src="images/app_screenshot_3.png" width="30%" />
 </p>
 
 Created while learning Ruby on Rails as a Capstone project. You can add new categories, add expenses in those categories to keep a track of where you spend all your money.
