@@ -102,6 +102,10 @@ header {
 }
 
 #categories-page {
+  form {
+    margin: 0;
+  }
+
   #categories {
     display: flex;
     flex-direction: column;
@@ -169,6 +173,10 @@ footer {
 }
 
 #expenses-page {
+  form {
+    margin: 0;
+  }
+
   #category-container {
     .category {
       display: flex;
