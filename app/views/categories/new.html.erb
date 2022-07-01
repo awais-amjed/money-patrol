@@ -1,0 +1,6 @@
+<div id="new-category-page">
+  <%= render 'layouts/header', title: 'New Category', back_url: categories_path, logout: true %>
+  <div class="content">
+    <%= render "form", category: @category %>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<%= link_to category do %>
+  <div class="category">
+    <img src="<%= category.icon %>" alt="Category icon">
+    <div class="category-text-container">
+      <h2 class="category-name"><%= category.name %></h2>
+      <p class="category-creation-time"><%= category.created_at.strftime('%d %B %Y') %></p>
+    </div>
+    <p class="category-amount">$<%= category.expenses.sum(:amount) %></p>
+  </div>
+<% end %>

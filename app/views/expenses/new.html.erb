@@ -1,0 +1,6 @@
+<div id="new-expense-page">
+  <%= render 'layouts/header', title: 'New Expense', back_url: category_path(@category), logout: true %>
+  <div class="content">
+    <%= render "form", expense: @expense %>
+  </div>
+</div>
