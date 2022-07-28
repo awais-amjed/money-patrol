@@ -24,8 +24,8 @@ Created while learning Ruby on Rails as a Capstone project. You can add new cate
 
 - Check it out on [Heroku](https://money-patrol.herokuapp.com/)
 - Use these credentials to Login if you don't want to make an account :D
-  - meow@meow.com
-  - 123123
+  - Email: meow@meow.com
+  - Password: 123123
 
 ## Getting Started
 
